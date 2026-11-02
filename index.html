@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff5f0" />
+  <title>Mochi Snake – A Little Snake, A Big Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Mochi Snake trang chủ" data-screen-link="home">
+      <span class="brand-mark">🍓</span>
+      <span>mochi<span class="brand-light">snake</span></span>
+    </a>
+    <div class="top-actions">
+      <span class="tiny-label">A LITTLE SNAKE, A BIG ADVENTURE!</span>
+      <button class="icon-button" id="soundButton" aria-label="Bật hoặc tắt âm thanh" title="Bật/tắt âm thanh">♫</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="screen active" id="homeScreen">
+      <div class="hero-card">
+        <div class="sparkle sparkle-a">✦</div>
+        <div class="sparkle sparkle-b">✧</div>
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEW LITTLE HAPPY PLACE</span>
+          <h1>MOCHI<br><span>SNAKE</span></h1>
+          <p class="tagline">A little snake, a big adventure!</p>
+          <p class="intro">Cùng Mochi khám phá khu vườn trái cây ngọt ngào nhé. Ăn thật nhiều, ghi thật nhiều điểm và đừng để chú rắn va vào chính mình!</p>
+          <div class="hero-buttons">
+            <button class="primary-button" data-go="level">▶&nbsp; PLAY NOW</button>
+            <button class="secondary-button" data-go="how">♡&nbsp; HOW TO PLAY</button>
+          </div>
+          <button class="text-button" data-go="leaderboard">🏆&nbsp; Xem bảng xếp hạng</button>
+        </div>
+        <div class="hero-art" aria-label="Minh họa chú rắn Mochi và trái cây">
+          <div class="sun-shape"></div>
+          <span class="float-fruit fruit-one">🍓</span>
+          <span class="float-fruit fruit-two">🍑</span>
+          <span class="float-fruit fruit-three">🍒</span>
+          <span class="flower flower-one">✿</span>
+          <span class="flower flower-two">✿</span>
+          <div class="cloud cloud-one"></div>
+          <div class="cloud cloud-two"></div>
+          <div class="snake-illustration">
+            <div class="snake-body body-back"></div>
+            <div class="snake-body body-front"></div>
+            <div class="snake-head">
+              <span class="eye eye-left"></span><span class="eye eye-right"></span>
+              <span class="cheek cheek-left"></span><span class="cheek cheek-right"></span>
+              <span class="smile"></span>
+            </div>
+          </div>
+          <div class="grass grass-left">〰</div><div class="grass grass-right">〰</div>
+          <div class="art-caption">meet your new bestie <span>♡</span></div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature"><span>🍒</span><div><strong>Collect fruits</strong><small>Ăn trái cây, nhận điểm</small></div></div>
+        <div class="feature"><span>🌷</span><div><strong>3 lovely levels</strong><small>Thử thách tăng dần</small></div></div>
+        <div class="feature"><span>🏆</span><div><strong>Beat your best</strong><small>Lưu thành tích cá nhân</small></div></div>
+      </div>
+    </section>
+
+    <section class="screen sub-screen" id="howScreen">
+      <button class="back-button" data-go="home">← Trang chủ</button>
+      <div class="section-heading"><span class="eyebrow">A TINY GUIDE FOR YOU</span><h2>How to <span>play?</span></h2><p>Chỉ cần một chút khéo léo để giúp Mochi chinh phục khu vườn!</p></div>
+      <div class="guide-grid">
+        <article class="guide-card"><span class="guide-icon">⌨️</span><h3>Di chuyển</h3><p>Dùng phím mũi tên hoặc WASD để điều khiển Mochi đi lên, xuống, trái và phải.</p></article>
+        <article class="guide-card"><span class="guide-icon">🍓</span><h3>Thu thập trái cây</h3><p>Mỗi trái cây Mochi ăn được sẽ giúp bạn nhận thêm 10 điểm và rắn dài thêm một đốt.</p></article>
+        <article class="guide-card"><span class="guide-icon">💗</span><h3>Tránh va chạm</h3><p>Đừng để Mochi đụng vào tường hoặc chính phần thân của mình nhé!</p></article>
+        <article class="guide-card"><span class="guide-icon">⏸️</span><h3>Tạm dừng</h3><p>Nhấn Space hoặc nút Pause để nghỉ một chút, sau đó tiếp tục cuộc vui.</p></article>
+      </div>
+      <button class="primary-button centered" data-go="level">LET'S PLAY&nbsp; →</button>
+    </section>
+
+    <section class="screen sub-screen" id="levelScreen">
+      <button class="back-button" data-go="home">← Trang chủ</button>
+      <div class="section-heading"><span class="eyebrow">CHOOSE YOUR ADVENTURE</span><h2>Pick a <span>level!</span></h2><p>Chọn thử thách phù hợp với bạn.</p></div>
+      <div class="level-grid">
+        <button class="level-card level-easy" data-level="1"><span class="level-emoji">🍓</span><span class="level-tag">LEVEL 01</span><strong>Sweet Garden</strong><small>Dễ · Tốc độ chậm</small><span class="level-play">PLAY →</span></button>
+        <button class="level-card level-medium" data-level="2"><span class="level-emoji">🍑</span><span class="level-tag">LEVEL 02</span><strong>Peach Paradise</strong><small>Trung bình · Tốc độ vừa</small><span class="level-play">PLAY →</span></button>
+        <button class="level-card level-hard" data-level="3"><span class="level-emoji">🫐</span><span class="level-tag">LEVEL 03</span><strong>Berry Challenge</strong><small>Khó · Tốc độ nhanh</small><span class="level-play">PLAY →</span></button>
+      </div>
+    </section>
+
+    <section class="screen sub-screen" id="leaderboardScreen">
+      <button class="back-button" data-go="home">← Trang chủ</button>
+      <div class="section-heading"><span class="eyebrow">YOUR LITTLE ACHIEVEMENTS</span><h2>Leader<span>board</span></h2><p>Những thành tích đáng yêu nhất của bạn.</p></div>
+      <div class="leaderboard-card"><div class="leaderboard-head"><span>RANK</span><span>PLAYER</span><span>SCORE</span></div><div id="leaderboardRows"><p class="empty-state">🌷 Chưa có thành tích nào. Hãy chơi một lượt nhé!</p></div></div>
+    </section>
+
+    <section class="screen sub-screen" id="gameScreen">
+      <button class="back-button" data-go="level">← Chọn cấp độ</button>
+      <div class="game-heading"><div><span class="eyebrow">MOCHI'S PLAYGROUND</span><h2 id="gameLevelName">Sweet Garden</h2></div><div class="game-stats"><div><small>SCORE</small><strong id="scoreValue">0</strong></div><div><small>BEST</small><strong id="bestValue">0</strong></div></div></div>
+      <div class="game-panel">
+        <div class="game-toolbar">
+          <span>🍓 Thu thập 10 trái cây để chiến thắng!</span>
+          <div class="game-controls">
+            <button class="mini-button" id="soundButton" type="button" aria-label="Bật hoặc tắt âm thanh">♫ Âm thanh</button>
+            <button class="mini-button" id="pauseButton" type="button">⏸ Tạm dừng</button>
+            <button class="mini-button" id="restartButton" type="button">↻ Chơi lại</button>
+          </div>
+        </div>
+        <canvas id="gameCanvas" width="600" height="400" aria-label="Khu vực chơi Mochi Snake"></canvas>
+        <div class="game-stats"><span>🍓 Điểm: <strong id="scoreValue">0</strong></span><span>🏆 Kỷ lục: <strong id="bestValue">0</strong></span><span>🎯 Mục tiêu: <strong id="targetValue">100</strong></span></div>
+        <p class="game-help">Dùng phím mũi tên / WASD hoặc vuốt trên màn hình · Nhấn Space để tạm dừng</p>
+        <div class="touch-pad" aria-label="Điều khiển cảm ứng">
+          <button type="button" data-dir="up" aria-label="Đi lên">▲</button>
+          <div><button type="button" data-dir="left" aria-label="Sang trái">◀</button><button type="button" data-dir="down" aria-label="Đi xuống">▼</button><button type="button" data-dir="right" aria-label="Sang phải">▶</button></div>
+        </div>
+        <div class="game-message" id="gameMessage">🐍 Mochi đã sẵn sàng! Dùng phím mũi tên để bắt đầu.</div>
+        <div class="game-bottom"><button class="secondary-button" data-go="level">ĐỔI CẤP ĐỘ</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made with <span>♥</span> for little happy moments · MOCHI SNAKE</footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
